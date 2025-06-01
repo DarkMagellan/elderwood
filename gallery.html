@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Галерея | Ваша назва</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Логотип" class="logo">
+    <h2>Корпусні меблі на замовлення</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="info.html">Інформація</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="preview-gallery">
+      <h2 style="text-align: center;">Наші роботи</h2>
+
+      <div class="filters">
+        <button onclick="filterGallery('all')">Всі</button>
+        <button onclick="filterGallery('kitchen')">Кухні</button>
+        <button onclick="filterGallery('wardrobe')">Гардеробні</button>
+        <button onclick="filterGallery('living')">Вітальні</button>
+		<button onclick="filterGallery('dresser')">Шафи</button>
+      </div>
+
+      <div class="gallery">
+        <img src="img/gallery1.jpg" alt="Кухня" class="kitchen">
+        <img src="img/gallery2.jpg" alt="Гардеробна" class="wardrobe">
+        <img src="img/gallery3.jpg" alt="Кухня" class="kitchen">
+        <img src="img/gallery4.jpg" alt="Гардеробна" class="wardrobe">
+        <img src="img/gallery5.jpg" alt="Кухня" class="kitchen">
+        <img src="img/gallery6.jpg" alt="Шафа" class="dresser">
+      </div>
+	  <section class="upload-section">
+  <h2 style="text-align: center;">Додати нове фото</h2>
+  <form id="upload-form">
+    <label>
+      Оберіть зображення:
+      <input type="file" id="image-input" accept="image/*">
+    </label>
+
+    <label>
+      Категорія:
+      <select id="image-category">
+        <option value="kitchen">Кухня</option>
+        <option value="wardrobe">Гардеробна</option>
+        <option value="living">Вітальня</option>
+		<option value="dresser">Шафа</option>
+      </select>
+    </label>
+
+    <button type="submit" class="btn">Завантажити</button>
+  </form>
+
+  <div id="preview-container" class="gallery"></div>
+</section>
+    </section>
+  </main>
+
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Elderwood. Всі права захищені.</p>
+  </footer>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>
