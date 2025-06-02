@@ -399,3 +399,15 @@ footer {
 .btn:hover {
   background-color: #4e6f90;
 }
+.video-wrapper {
+  margin: 20px auto;
+  max-width: 90%;
+  text-align: center;
+}
+.video-wrapper iframe,
+.video-wrapper video {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
